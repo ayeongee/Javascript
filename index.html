@@ -1,36 +1,44 @@
      <!DOCTYPE html>
      <html lang="" dir="ltr">
        <head>
-         <style>
-         .js{
-           font-weight: bold;
-         }
-         #first{
-           color:green;
-         }
-         span{
-           color:blue;
-         }
-       </style>
          <meta charset="utf-8">
-         <title><span class="js">Javascript</title>
+         <title>Javascript</title>
        </head>
        <body>
-         <h2 style="background-color:coral;color:powderblue"> <span class="js">Javascript</h2>
+         <h2 style="color:pink"> <span class="js">Javascript</h2>
          <input id="night_day" type="button" value="night" onclick="
-         if(document.querySelector('#night_day').value === 'night'){
-           document.querySelector('body').style.backgroundColor = 'black';
-            document.querySelector('body').style.color = 'white';
-            document.querySelector('#night_day').value = 'day';
+         var target = document.querySelector('body');
+         if(this.value === 'night'){
+           target.style.backgroundColor = 'black';
+            target.style.color = 'white';
+            this.value = 'day';
+            var alist = document.querySelectorAll('a');
+var i = 0;
+while(i < alist.length){
+    console.log(alist[i]);
+    alist[i].style.color = 'powderblue';
+    i = i + 1;
+}
          }
          else{
-           document.querySelector('body').style.backgroundColor = 'white';
-            document.querySelector('body').style.color = 'black';
-            document.querySelector('#night_day').value = 'night';
+          target.style.backgroundColor = 'white';
+            target.style.color = 'black';
+            this.value = 'night';
+            var alist = document.querySelectorAll('a');
+var i = 0;
+while(i < alist.length){
+    console.log(alist[i]);
+    alist[i].style.color = 'blue';
+    i = i + 1;
+}
          }
         ">
         <p>
-Javascript so difficult
+<ul>
+  <li> <a href="http://naver.com"> Html</a> </li>
+  <li> <a href="http://naver.com"> CSS</a> </li>
+  <li> <a href="http://naver.com"> JavaScript</a> </li>
+</ul>
 </p>
 
        </body>
